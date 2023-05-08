@@ -1,6 +1,6 @@
 .topSet {
     height: 300px;
-    background: url("/images/bg1.jpg") no-repeat center center;
+    background: url("images/bg1.jpg") no-repeat center center;
     display: flex;
     flex-direction: column;
     align-items: center;
