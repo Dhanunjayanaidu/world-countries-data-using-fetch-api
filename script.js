@@ -1,3 +1,12 @@
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  loader.classList.add("loader-hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild("loader");
+  });
+});
+
 // step 1 we need to fecth the data from api
 let response = await fetch("https://restcountries.com/v3.1/all");
 let data = await response.json();
@@ -24,7 +33,10 @@ function getCountries(countriesData) {
 }
 getCountries(data);
 
-// step 4 On click sorting data A to Z
+// step 4 we need to search countries using start with letters
+// let starting_button = document.getElementById("starting_button");
+
+// step 6 On click sorting data A to Z
 let sort_button = document.getElementById("sort_button");
 sort_button.addEventListener("click", (event) => {
   function compare(a, b) {
