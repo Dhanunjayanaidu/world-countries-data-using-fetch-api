@@ -23,7 +23,7 @@ function getCountries(countriesData) {
   display.innerHTML = "";
   countriesData.map((country) => {
     display.innerHTML += `
-        <div class="col-2">
+        <div class="col-6 col-sm-2">
             <div class="countrySet">
                 <div class="bgSet"></div>
                 <span style="z-index: 99;">${country.name.common}</span>
